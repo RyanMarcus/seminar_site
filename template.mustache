@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brandeis Ph.D. Seminars</title>
+    <style>
+      @media (max-width: 700px) {
+      body {
+      width: 98%;
+      margin: auto;
+      }
+      }
+
+      @media screen and (min-width: 700px) {
+      body {
+      width: 700px;
+      margin: auto;
+      padding-top: 10px;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Brandeis Ph.D. seminars</h1>
+    <p>Brandeis Ph.D. seminars are hosted at most once every two weeks. Any Ph.D. can sign up to give a talk, and all Brandeis CS and CL Ph.D. students are welcome to attend. Free pizza is provided. To sign up, <a href="mailto:rcmarcus@brandeis.edu">email Ryan Marcus</a>. Seminars are currently held on <strong>Wednesdays at 6pm in Volen 101</strong>.</p>
+
+    <p>Previous and upcoming seminars:</p>
+    <ul>
+      {{#seminars}}
+      <li><a href="#{{ id }}">{{short_title}}</a>, {{speaker}} ({{short_date}})</li>
+      {{/seminars}}
+    </ul>
+    <hr>
+
+    {{#seminars}}
+    <h2 id="{{ id }}">{{ title }}</h2>
+    <h3>Speaker:
+      {{#url}}<a href="{{url}}">{{/url}}
+        {{ speaker }}
+        {{#url}}</a>{{/url}}
+    </h3>
+    <div class="date">{{ date }}</div>
+    <p>{{abstract}}</p>
+    <p><a href="{{paper_url}}">Paper</a></p>
+    {{/seminars}}
+  </body>
+  
+  
+</html>
