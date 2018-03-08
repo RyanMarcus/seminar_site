@@ -56,7 +56,7 @@ def process_papers(seminars):
 
 def assign_ids(seminars):
     """assigns IDs sequentially to the seminars """
-    for idx, s in enumerate(seminars):
+    for idx, s in reversed(enumerate(seminars)):
         s["id"] = "seminar{}".format(idx)
     return seminars
 
