@@ -59,9 +59,17 @@
    "date": "March 7th, 2018",
    "abstract": "The advent of wearable consumer-grade brainwave sensors opens the possibility of building educational technology that can provide reliable feedback about the focus and attention of a student who is engaged in a learning activity. In this paper, we demonstrate the practicality of developing a simple web-based application that exploits EEG data to monitor reading effectiveness personalized for individual readers. Our tool uses a variant of k-means classification on the relative power of the five standard bands (alpha, beta, gamma, delta, theta) for each of four electrodes on the Muse wearable brainwave sensor. We demonstrate that after 30 minutes of training, our relatively simple approach is able to successfully distinguish between brain signals produced when the subject engages in reading versus when they are relaxing. The accuracy of classification varied across the 10 subjects from 55% to 85% with a mean of 71%. The standard approach to recognize relaxation is to look for strong alpha and/or theta signals and it is reasonably effective but is most associated with closed eye relaxation and it does not allow for personalization. Our k-means classification approach provides a personalized classifier which distinguishes open eye relaxation from reading and has the potential to detect a wide variety of different cognitive states.",
    "paper": "personalized-reading-coach.pdf"
+  },
+
+   {"title": "RQL: Retrospective Computations over Snapshot Sets",
+   "speaker": "Nikos Tsikoudis",
+   "url": "http://www.cs.brandeis.edu/~tsikudis/",
+   "date": "May 21st, 2018",
+    "abstract": "Applications need to analyze the past state of their data to provide auditing and other forms of fact checking. Retrospective snapshot systems that support computations over data store snapshots, allow applications using simple data stores like Berkeley DB or SQLite, to provide past state analysis in a convenient way. Current snapshot systems however, offer no satisfactory support for computations that analyze multiple snapshots. We have developed a Retrospective Query Language (RQL), a simple declarative extension to SQL that allows to specify and run multi-snapshot computations conveniently in a snapshot system, using a small number of simple mechanisms defined in terms of relational constructs familiar to programmers. We describe RQL mechanisms, explain how they translate into SQL computations in a snapshot system, and show how to express a number of common analysis patterns with illustrative examples. We also describe how we implemented RQL in a simple way utilizing SQLite UDF framework in a Berkeley DB data store using Retro page-level incremental snapshot system. Multi-snapshot computations running over page-level incremental snapshots bring up interesting performance issues that have not been studied before. We present the first study defining a performance envelope for multi-snapshot computations over page-level incremental snapshots.",
+    "paper": "paper-336.pdf"
   }
+  
  ]
 }
-
 
 
