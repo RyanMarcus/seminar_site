@@ -66,8 +66,8 @@ def assign_short_titles(seminars):
 
     for s in seminars:
         s["short_title"] = (s["title"]
-                            if len(s["title"]) < 49 else
-                            s["title"][:45] + "...")
+                            if len(s["title"]) < 47 else
+                            s["title"][:44] + "...")
     return seminars
         
 

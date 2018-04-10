@@ -14,6 +14,14 @@
     "abstract": "We demonstrate a self-organizing, multi-agent system to generate approximate solutions to the route assignment problem for a large number of vehicles across many origins and destinations. Our algorithm produces a set of mixed strategies over the set of paths through the network, which are suitable for use by autonomous vehicles in the absence of centralized control or coordination. Our approach combines ideas from co-evolutionary dynamics in which many species coordinate and compete for efficient navigation, and ideas from swarm intelligence in which many simple agents self-organize into successful behavior using limited between-agent communication. Experiments demonstrate a marked improvement of both individual and total travel times as compared to greedy uncoordinated strategies, and we analyze the differences in outcomes for various routes as the simulation progresses.",
     "paper": "MoranPollackRouting16.pdf"
   },
+
+  { "title": "Multimodal Semantic Simulations of Linguistically Underspecified Motion Events",
+    "speaker": "Nikhil Krishnaswamy",
+    "url": "http://nikhilkrishnaswamy.com/",
+    "date": "April 20th, 2016",
+    "abstract": "In this paper, we describe a system for generating three-dimensional visual simulations of natural language motion expressions. We use a rich formal model of events and their participants to generate simulations that satisfy the minimal constraints entailed by the associated utterance, relying on semantic knowledge of physical objects and motion events. This paper outlines technical considerations and discusses implementing the aforementioned semantic models into such a system.",
+    "paper": "1610.00602.pdf"
+  },
   
   { "title": "Condensed Memory Networks for Clinical Diagnostic Inferencing",
     "speaker": "Aaditya Prakash",
