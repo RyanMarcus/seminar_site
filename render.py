@@ -45,13 +45,13 @@ def process_papers(seminars):
 
     Assumes the "id" field already exists (used for naming each PDF)
     """
-    
     for s in seminars:
-        paper_path = s["paper_path"]
-        paper_name = "{}.pdf".format(s["id"])
-        paper_out = os.path.join("output", "papers", paper_name)
-        s["paper_url"] = "papers/{}".format(paper_name)
-        shutil.copy(paper_path, paper_out)
+        if "paper_path" in s:
+            paper_path = s["paper_path"]
+            paper_name = "{}.pdf".format(s["id"])
+            paper_out = os.path.join("output", "papers", paper_name)
+            s["paper_url"] = "papers/{}".format(paper_name)
+            shutil.copy(paper_path, paper_out)
     return seminars
 
 def assign_ids(seminars):
@@ -93,9 +93,11 @@ for s in data["seminars"]:
     for req_f in required_fields:
         assert req_f in s
         
-    s["paper_path"] = os.path.join("papers", s["paper"])
-    if not os.path.exists(s["paper_path"]):
-        raise FileNotFoundError(s["paper_path"])
+
+    if "paper" in s:
+        s["paper_path"] = os.path.join("papers", s["paper"])
+        if not os.path.exists(s["paper_path"]):
+            raise FileNotFoundError(s["paper_path"])
     
 
 print("All data validated.")

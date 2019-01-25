@@ -23,7 +23,7 @@
 
   <body>
     <h1>Brandeis Ph.D. seminars</h1>
-    <p>Brandeis Ph.D. seminars are hosted at most once every two weeks. Any Ph.D. can sign up to give a talk, and all Brandeis CS and CL Ph.D. students are welcome to attend. Free pizza is provided. To sign up, <a href="mailto:rcmarcus@brandeis.edu">email Ryan Marcus</a>. Seminars are currently held on <strong>Wednesdays at 6pm in Volen 101</strong>.</p>
+    <p>Brandeis Ph.D. seminars are hosted at most once every two weeks. Any Ph.D. can sign up to give a talk, and all Brandeis CS and CL Ph.D. students are welcome to attend. Free pizza is provided. To sign up, <a href="mailto:rcmarcus@brandeis.edu">email Ryan Marcus</a>. Seminars are currently held on <strong>Fridays at 2pm in Volen 101</strong>.</p>
 
     <p>Previous and upcoming seminars:</p>
     <ul>
@@ -42,7 +42,7 @@
     </h3>
     <div class="date">{{ date }}</div>
     <p>{{abstract}}</p>
-    <p><a href="{{paper_url}}">Paper</a></p>
+    {{#paper_url}}<p><a href="{{paper_url}}">Paper</a></p>{{/paper_url}}
     {{/seminars}}
   </body>
   
